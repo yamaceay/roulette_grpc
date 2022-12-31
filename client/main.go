@@ -21,9 +21,10 @@ package main
 
 import (
 	"context"
-	"flag"
 	"log"
 	"time"
+
+	flag "github.com/spf13/pflag"
 
 	pb "github.com/roulette_grpc/roulette"
 	"google.golang.org/grpc"
@@ -35,8 +36,8 @@ const (
 )
 
 var (
-	addr     = flag.String("addr", "localhost:50051", "host:port")
-	filename = flag.String("file", defaultName, "filename")
+	addr     = flag.StringP("a", "addr", "localhost:50051", "host:port")
+	filename = flag.StringP("f", "file", defaultName, "filename")
 )
 
 func main() {

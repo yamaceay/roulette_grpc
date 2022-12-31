@@ -1,3 +1,21 @@
+## Setup & Run
+
+```
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+export PATH="$PATH:$(go env GOPATH)/bin"
+```
+
+In Terminal #1:
+```
+go run server/main.go -p <port>
+```
+
+In Terminal #2:
+```
+go run client/main.go -f <filename> -l <host>:<port>
+```
+
 ## Configuration of a Strategy
 ```
 {

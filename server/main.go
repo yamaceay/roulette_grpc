@@ -22,12 +22,13 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"flag"
 	"fmt"
 	"io"
 	"log"
 	"net"
 	"os"
+
+	flag "github.com/spf13/pflag"
 
 	pb "github.com/roulette_grpc/roulette"
 	"github.com/roulette_grpc/server/lib"
@@ -36,7 +37,7 @@ import (
 )
 
 var (
-	port = flag.Int("port", 50051, "The server port")
+	port = flag.IntP("p", "port", 50051, "The server port")
 )
 
 // server is used to implement helloworld.GreeterServer.
