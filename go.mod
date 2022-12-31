@@ -3,7 +3,7 @@ module github.com/roulette_grpc
 go 1.18
 
 require (
-	github.com/golang/protobuf v1.5.2
+	github.com/golang/protobuf v1.5.2 // indirect
 	google.golang.org/grpc v1.51.0
 	google.golang.org/protobuf v1.27.1
 )
