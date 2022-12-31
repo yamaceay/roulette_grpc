@@ -35,8 +35,8 @@ const (
 )
 
 var (
-	addr = flag.String("addr", "localhost:50051", "host:port")
-	name = flag.String("name", defaultName, "filename")
+	addr     = flag.String("addr", "localhost:50051", "host:port")
+	filename = flag.String("file", defaultName, "filename")
 )
 
 func main() {
@@ -52,9 +52,9 @@ func main() {
 	// Contact the server and print out its response.
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	r, err := c.Play(ctx, &pb.GameRequest{Name: *name})
+	r, err := c.Play(ctx, &pb.GameRequest{Filename: *filename})
 	if err != nil {
 		log.Fatalf("could not receive: %v", err)
 	}
-	log.Printf("Received: %s", r.GetMessage())
+	log.Printf("Received: \n%s", r.GetMessage())
 }

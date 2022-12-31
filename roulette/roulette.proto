@@ -26,7 +26,7 @@ service Game {
 
 // The request message containing the game options.
 message GameRequest {
-  string name = 1;
+  string filename = 1;
 }
 
 // The response message containing the game statistics.

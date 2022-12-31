@@ -46,7 +46,7 @@ type server struct {
 
 // SayHello implements helloworld.GreeterServer
 func (s *server) Play(ctx context.Context, in *pb.GameRequest) (*pb.GameReply, error) {
-	options, err := readGameOptions(in.GetName())
+	options, err := readGameOptions(in.GetFilename())
 	if err != nil {
 		return nil, fmt.Errorf("EmptyGameOptions: %w", err)
 	}
