@@ -36,8 +36,8 @@ const (
 )
 
 var (
-	addr     = flag.StringP("a", "addr", "localhost:50051", "host:port")
-	filename = flag.StringP("f", "file", defaultName, "filename")
+	addr     = flag.StringP("addr", "a", "localhost:50051", "host:port")
+	filename = flag.StringP("file", "f", defaultName, "filename")
 )
 
 func main() {

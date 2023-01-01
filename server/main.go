@@ -30,14 +30,14 @@ import (
 
 	flag "github.com/spf13/pflag"
 
+	"github.com/roulette_grpc/lib"
 	pb "github.com/roulette_grpc/roulette"
-	"github.com/roulette_grpc/server/lib"
 
 	"google.golang.org/grpc"
 )
 
 var (
-	port = flag.IntP("p", "port", 50051, "The server port")
+	port = flag.IntP("port", "p", 50051, "The server port")
 )
 
 // server is used to implement helloworld.GreeterServer.
